@@ -5,10 +5,9 @@
  - OpenGL
  - Glut
 
-![FinalEffect](https://user-images.githubusercontent.com/77489537/165498818-eda8ed5b-5734-4f32-b54f-6b3645ab19d1.gif)
+![FinalEffect](https://user-images.githubusercontent.com/77489537/165499063-7d0e6a94-61c8-4de8-bf7d-7a6efeda2ce5.gif)
 
 ## Authors
 - [@maciekzygmunt](https://github.com/maciekzygmunt)
 - [@kocos12](https://github.com/kocos12)
 - [@albizaw](https://github.com/albizaw)
-
