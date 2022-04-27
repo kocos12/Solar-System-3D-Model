@@ -2,10 +2,9 @@
 #include<stdio.h>
 #include<math.h>
 
-float x,y;
-float PI=3.1416;
+#define PI 3.1416
 
-void draw_orbits(GLfloat radius, float x, float y)
+void draw_orbits(float radius, float x, float y)
 {   
     //orbit
     glBegin(GL_LINE_LOOP);
@@ -13,7 +12,7 @@ void draw_orbits(GLfloat radius, float x, float y)
 
     int triangleAmount = 360;
 
-    GLfloat twicePi = 2.0 * PI;
+    float twicePi = 2.0 * PI;
 
         for(int i = 0; i <= triangleAmount; i++) 
         {
@@ -25,10 +24,10 @@ void draw_orbits(GLfloat radius, float x, float y)
     glEnd();
 }
 
-void draw_planets(GLfloat radius, float x, float y, int r, int g, int b)
+void draw_planets(float radius, float x, float y, int r, int g, int b)
 {
     int triangleAmount = 360;
-    GLfloat twicePi = 2.0 * PI;
+    float twicePi = 2.0 * PI;
 
     glBegin(GL_TRIANGLE_FAN);
     glColor3ub(r, g, b);
@@ -36,66 +35,110 @@ void draw_planets(GLfloat radius, float x, float y, int r, int g, int b)
     glVertex2f(x, y); // center of circle
 
     for(int i = 0; i <= triangleAmount;i++) {
-     glVertex2f(
-                    x + (radius * cos(i *  twicePi / triangleAmount)),
-                    y + (radius * sin(i * twicePi / triangleAmount))
-                );
+        glVertex2f(
+                        x + (radius * cos(i *  twicePi / triangleAmount)),
+                        y + (radius * sin(i * twicePi / triangleAmount))
+                    );
     }
     glEnd();
+
+
 }
 
-float x_mercury;
-float y_mercury;
-
-float x_wenus;
-float y_wenus;
-
-float x_earth;
-float y_earth;
-
-float x_mars;
-float y_mars;
-
-float x_jupiter;
-float y_jupiter;
-
-float x_saturn;
-float y_saturn;
-
-float x_uranus;
-float y_uranus;
-
-
-
+float xy_mercury = 2.5;
+float xy_wenus = 0.52;
+float xy_earth = 0.8;
+float xy_mars = 3;
+float xy_jupiter = 5.2;
+float xy_saturn = 1.3;
+float xy_uranus = 4.4;
+float xy_neptun = 2.8;
+float xy_moon = 2.8;
 
 void draw()
 {
+
+    glClear(GL_COLOR_BUFFER_BIT);
     //orbits
     for(int i=0; i<8;i++ )
         draw_orbits(20+i*10, 0, 0);
 
     draw_planets(10,0,0,255,255,0); //sun
-    draw_planets(1, 20 * cos(2.5), 20 * sin(2.5), 204, 204, 204); //mercury
-    draw_planets(2, 30 * cos(0.52), 30 * sin(0.52), 204, 204, 0); //wenus
-    draw_planets(2, 40 * cos(0.8), 40 * sin(0.8), 0, 0, 255); //earth
-    draw_planets(2, 50 * cos(3), 50 * sin(3), 255, 25, 25); //mars
-    draw_planets(7, 60 * cos(5.2), 60 * sin(5.2), 255, 128, 0); //jupiter
-    draw_planets(5, 70 * cos(1.3), 70 * sin(1.3), 217, 102, 15); //saturn
-    draw_planets(4, 80 * cos(4.4), 80 * sin(4.4), 0, 229, 0); //uranus
-    draw_planets(4, 90 * cos(2.8), 90 * sin(2.8), 0, 204, 76); //neptun
-
+    draw_planets(1,20 * cos(xy_mercury) ,20 * sin(xy_mercury), 204, 204, 204); //mercury
+    draw_planets(2, 30 * cos(xy_wenus), 30 * sin(xy_wenus), 204, 204, 0); //wenus
+    draw_planets(2, 40 * cos(xy_earth), 40 * sin(xy_earth) , 0, 0, 255); //earth
+    draw_planets(2,50 * cos(xy_mars) ,50 * sin(xy_mars), 255, 25, 25); //mars
+    draw_planets(7,60 * cos(xy_jupiter),60 * sin(xy_jupiter) , 255, 128, 0); //jupiter
+    draw_planets(5, 70 * cos(xy_saturn), 70 * sin(xy_saturn), 217, 102, 15); //saturn
+    draw_planets(4, 80 * cos(xy_uranus), 80 * sin(xy_uranus), 0, 229, 0); //uranus
+    draw_planets(4, 90 * cos(xy_neptun), 90 * sin(xy_neptun), 0, 204, 76); //neptun
+    
     //saturn rings
     for(int i=0; i<3;i++ )
-        draw_orbits(7+(i/2), 70 * cos(1.3), 70 * sin(1.3));
-
+        draw_orbits(7+(i/2), 70 * cos(xy_saturn), 70 * sin(xy_saturn));
+    
+    //earth moon
+    draw_planets(0.5, 40 * cos(xy_earth) + 3 * cos(xy_moon), 40 * sin(xy_earth) + 3 * sin(xy_moon), 201, 201, 201);
+    glutPostRedisplay();
     glutSwapBuffers();
 }
 
 void init(void)
 {
-    glClearColor (1.0, 1.0, 1.0, 0.0);
+    glClearColor (0.0, 0.0, 0.0, 0.0);
     glLoadIdentity();
     glOrtho(-100.0, 100.0, -100.0, 100.0, -1.0, 1.0);
+}
+
+void timer(int) {
+    
+    glutPostRedisplay();
+    glutTimerFunc(1000 / 60, timer, 0);
+    
+    xy_mercury += 0.02;
+    if(xy_mercury >= 2*PI){
+        xy_mercury = 0;
+    }
+
+    xy_wenus += 0.008;
+     if(xy_wenus >= 2*PI){
+        xy_wenus = 0;
+    }
+
+    xy_earth += 0.005;
+     if(xy_earth >= 2*PI){
+        xy_earth = 0;
+    }
+
+    xy_mars += 0.002;
+     if(xy_mars >= 2*PI){
+         xy_mars = 0;
+    }
+
+     xy_jupiter += 0.002*0.15;
+     if (xy_jupiter >= 2 * PI) {
+         xy_jupiter = 0;
+     }
+
+     xy_saturn += 0.002 * 0.15*0.4;
+     if(xy_saturn >= 2*PI){
+         xy_saturn = 0;
+    }
+
+    xy_uranus += 0.002 * 0.15 * 0.4*0.35;
+     if(xy_uranus >= 2*PI){
+         xy_uranus = 0;
+    }
+
+    xy_neptun += 0.002 * 0.15 * 0.4 * 0.35*0.5;
+     if(xy_neptun >= 2*PI){
+         xy_neptun = 0;
+    }
+
+     xy_moon += 0.06;
+     if (xy_moon >= 2 * PI) {
+         xy_moon = 0;
+     }
 }
 
 int main(int argc,char** argv)
@@ -106,7 +149,10 @@ int main(int argc,char** argv)
     glutCreateWindow("Solar System");
 
     glutDisplayFunc(draw);
-    init ();
+
+    glutTimerFunc(0, timer, 0);
+
+    init();
     glutMainLoop();
     return 0;
 }
