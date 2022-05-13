@@ -55,9 +55,20 @@ float xy_uranus = 4.4;
 float xy_neptun = 2.8;
 float xy_moon = 2.8;
 
+GLdouble zoom = 0.0f;
+
 void draw()
 {
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
 
+    GLdouble ortho = 100 + zoom;
+    glOrtho(-ortho, ortho, -ortho, ortho, -250, 250);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    
+    
     glClear(GL_COLOR_BUFFER_BIT);
     //orbits
     for(int i=0; i<8;i++ )
@@ -141,6 +152,31 @@ void timer(int) {
      }
 }
 
+void mouse(int button, int state, int x, int y)
+{
+   // Wheel reports as button 3(scroll up) and button 4(scroll down)
+    GLdouble min_z = -300.0;
+    GLdouble max_z = 300.0;
+
+   if ((button == 3) || (button == 4)) // It's a wheel event
+   {
+       // Each wheel event reports like a button click, GLUT_DOWN then GLUT_UP
+       if (state == GLUT_UP) 
+           return; // Disregard redundant GLUT_UP event
+      
+       if (button == 3 && zoom < max_z)
+       {
+           //oddalanie
+           zoom += 5.0;
+       }
+       if (button == 4 && zoom > min_z)
+       {
+           //przyblizanie
+           zoom -= 5.0;
+       }
+   }
+}
+
 int main(int argc,char** argv)
 {
     glutInit(&argc,argv);
@@ -151,7 +187,8 @@ int main(int argc,char** argv)
     glutDisplayFunc(draw);
 
     glutTimerFunc(0, timer, 0);
-
+    
+    glutMouseFunc(mouse);
     init();
     glutMainLoop();
     return 0;
