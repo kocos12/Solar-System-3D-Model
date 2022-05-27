@@ -1,47 +1,47 @@
 ﻿  main.cpp
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(15,29): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(21,23): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(20,23): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(30,29): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(40,27): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(39,27): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(49,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(50,21): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(52,23): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(53,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(54,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(55,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(56,20): warning C4305: "inicjowanie": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(75,23): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(78,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(78,23): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(79,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(79,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(80,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(80,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(81,42): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(81,23): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(82,44): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(82,23): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(83,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(83,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(84,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(84,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(85,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(85,24): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(89,54): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(89,33): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(89,22): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(92,81): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(92,42): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(109,23): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(114,22): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(119,22): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(124,21): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(129,30): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(134,35): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(139,41): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(144,47): warning C4305: "+=": obcięcie z "double" do "float"
-C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\glut\main.cpp(149,21): warning C4305: "+=": obcięcie z "double" do "float"
-  glut.vcxproj -> C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt1_glut\x64\Debug\glut.exe
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(8,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(9,21): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(11,23): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(12,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(13,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(14,22): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(15,20): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(37,29): warning C4305: "inicjowanie": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(43,23): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(42,23): warning C4244: "argument": konwersja z "double" do "GLfloat", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(86,23): warning C4244: "argument": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(89,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(89,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(90,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(90,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(91,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(91,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(92,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(92,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(93,47): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(93,26): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(94,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(94,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(95,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(95,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(96,48): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(96,27): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(100,78): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(100,57): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(103,84): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(103,45): warning C4244: "argument": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(120,23): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(125,22): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(130,22): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(135,21): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(140,30): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(145,35): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(150,41): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(155,47): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(160,21): warning C4305: "+=": obcięcie z "double" do "float"
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(198,17): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(199,14): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(203,17): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\glut\main.cpp(204,14): warning C4244: "=": konwersja z "double" do "float", możliwa utrata danych
+  glut.vcxproj -> C:\Users\Michał\Documents\Projekty\Grafika komputerowa\projekt2_glut\x64\Debug\glut.exe
           1 file(s) copied.
