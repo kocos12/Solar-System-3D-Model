@@ -18,11 +18,13 @@ GLdouble zoom = 0.0f;
 
 // angle of rotation for the camera direction
 float angle = 0.0;
+float angle2 = 0.0;
 
 // actual vector representing the camera's direction
 float lx = 0.0f, lz = -1.0f;
+float ly = 0.0f;
 // XZ position of the camera
-float x = 0.0f, z = 0.0f;
+float x = 0.0f, z = 0.0f, y = 0.0f;
 
 float xRotated = 90.0, yRotated = 0.0, zRotated = 0.0;
 
@@ -51,17 +53,6 @@ void draw_planets_3d(float radius, float x, float y, int r, int g, int b)
     glColor3ub(r, g, b);
     glPushMatrix();
     glTranslatef(x, y, 0.0);
-    
-    /*
-    // rotation about X axis
-    glRotatef(xRotated, 50.0, 0.0, 0.0);
-    // rotation about Y axis
-    glRotatef(yRotated, 0.0, 0.0, 0.0);
-    // rotation about Z axis
-    glRotatef(zRotated, 0.0, 0.0, 0.0);
-    // scaling transfomation 
-    */
-
     glScalef(1.0, 1.0, 1.0);
     glutSolidSphere(radius, 100, 100);
     glPopMatrix();
@@ -73,13 +64,16 @@ void draw()
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
+
     GLdouble ortho = 100 + zoom;
     glOrtho(-ortho, ortho, -ortho, ortho, -250, 250);
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(x, 1.0f, z, x + lx, 1.0f, z + lz, 0.0f, 1.0f, 0.0f);
-    
+    //gluLookAt(x, y, z, x + lx, y+ly, z + lz, 0.0f, 1.0f, 0.0f);
+    gluLookAt(x, 0.0f, z, x, 0.0f, z - 1.0f, 0.0f, 1.0f, 0.0f);
+    glRotatef(angle2, 1, 0, 0);
+    glRotatef(angle, 0, 1, 0);
     glClear(GL_COLOR_BUFFER_BIT);
     //orbits
     for(int i=0; i<8;i++ )
@@ -94,15 +88,20 @@ void draw()
     draw_planets_3d(5, 70 * cos(xy_saturn), 70 * sin(xy_saturn), 217, 102, 15); //saturn
     draw_planets_3d(4, 80 * cos(xy_uranus), 80 * sin(xy_uranus), 0, 229, 0); //uranus
     draw_planets_3d(4, 90 * cos(xy_neptun), 90 * sin(xy_neptun), 0, 204, 76); //neptun
-    
     //saturn rings
     for(int i=0; i<3;i++ )
         draw_orbits(7 + (i / static_cast<float>(2)), 70 * cos(xy_saturn), 70 * sin(xy_saturn));
     
     //earth moon
     draw_planets_3d(0.5, 40 * cos(xy_earth) + 3 * cos(xy_moon), 40 * sin(xy_earth) + 3 * sin(xy_moon), 201, 201, 201);
+
+    //lighting
+    GLfloat light_position1[] = { 0, 0, 1, 1 };
+   glLightfv(GL_LIGHT0, GL_POSITION, light_position1);
+
+
     glutPostRedisplay();
-    glutSwapBuffers();
+    glutSwapBuffers();    
 }
 
 void init(void)
@@ -110,6 +109,10 @@ void init(void)
     glClearColor (0.0, 0.0, 0.0, 0.0);
     glLoadIdentity();
     glOrtho(-100.0, 100.0, -100.0, 100.0, -1.0, 1.0);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+    glShadeModel(GL_SMOOTH);
 }
 
 void timer(int) {
@@ -190,26 +193,18 @@ void mouse(int button, int state, int x, int y)
 
 void processSpecialKeys(int key, int xx, int yy) {
 
-    float fraction = 0.1f;
-
     switch (key) {
     case GLUT_KEY_LEFT:
-        angle -= 0.1f;
-        lx = sin(angle);
-        lz = -cos(angle);
+        angle -= 2.0f;
         break;
     case GLUT_KEY_RIGHT:
-        angle += 0.1f;
-        lx = sin(angle);
-        lz = -cos(angle);
+        angle += 2.0f;
         break;
     case GLUT_KEY_UP:
-        x += lx * fraction;
-        z += lz * fraction;
+        angle2 -= 2.0f;
         break;
     case GLUT_KEY_DOWN:
-        x -= lx * fraction;
-        z -= lz * fraction;
+        angle2 -= 2.0f;
         break;
     }
 }
@@ -223,7 +218,7 @@ int main(int argc,char** argv)
 
     glutDisplayFunc(draw);
     glutIdleFunc(draw);
-
+   
     glutSpecialFunc(processSpecialKeys);
 
     glutTimerFunc(0, timer, 0);
