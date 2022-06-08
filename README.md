@@ -4,11 +4,11 @@
  - C++
  - OpenGL
  - Glut
- 
- ![2022-06-08 13-28-59_Trim](https://user-images.githubusercontent.com/77489537/172606301-f11a50d9-7a12-426a-a219-ecac02f16317.gif)
+
+![FinalEffect](https://user-images.githubusercontent.com/77489537/172606871-9e78182f-3c33-4fca-96cd-cfab9cbf03b2.gif)
+
 
 ## Authors
 - [@maciekzygmunt](https://github.com/maciekzygmunt)
 - [@kocos12](https://github.com/kocos12)
 - [@albizaw](https://github.com/albizaw)
-
