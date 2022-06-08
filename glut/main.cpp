@@ -48,6 +48,16 @@ void draw_orbits(float radius, float x, float y)
     glEnd();
 }
 
+void draw_sun()
+{
+    glColor4f(255, 255, 0, 0.2); // should be completely invisible
+    glPushMatrix();
+    glTranslatef(0, 0, 0.0);
+    glScalef(1.0, 1.0, 1.0);
+    glutSolidSphere(10, 100, 100);
+    glPopMatrix();
+}
+
 void draw_planets_3d(float radius, float x, float y, int r, int g, int b)
 {
     glColor3ub(r, g, b);
@@ -56,7 +66,6 @@ void draw_planets_3d(float radius, float x, float y, int r, int g, int b)
     glScalef(1.0, 1.0, 1.0);
     glutSolidSphere(radius, 100, 100);
     glPopMatrix();
-
 }
 
 void draw()
@@ -79,7 +88,7 @@ void draw()
     for(int i=0; i<8;i++ )
         draw_orbits(20+i*10, 0, 0);
 
-    draw_planets_3d(10,0,0,255,255,0); //sun
+    draw_sun(); //sun
     draw_planets_3d(1,20 * cos(xy_mercury) ,20 * sin(xy_mercury), 204, 204, 204); //mercury
     draw_planets_3d(2, 30 * cos(xy_wenus), 30 * sin(xy_wenus), 204, 204, 0); //wenus
     draw_planets_3d(2, 40 * cos(xy_earth), 40 * sin(xy_earth) , 0, 0, 255); //earth
@@ -96,8 +105,8 @@ void draw()
     draw_planets_3d(0.5, 40 * cos(xy_earth) + 3 * cos(xy_moon), 40 * sin(xy_earth) + 3 * sin(xy_moon), 201, 201, 201);
 
     //lighting
-    GLfloat light_position1[] = { 0, 0, 1, 1 };
-   glLightfv(GL_LIGHT0, GL_POSITION, light_position1);
+    GLfloat light_position1[] = { 0, 0, 0, 1 };
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position1);
 
 
     glutPostRedisplay();
@@ -212,7 +221,8 @@ void processSpecialKeys(int key, int xx, int yy) {
 int main(int argc,char** argv)
 {
     glutInit(&argc,argv);
-    glutInitDisplayMode(GLUT_RGB|GLUT_DOUBLE);
+    glutInitDisplayMode(GLUT_RGBA|GLUT_DOUBLE);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glutInitWindowSize(800,800);
     glutCreateWindow("Solar System 3D");
 
